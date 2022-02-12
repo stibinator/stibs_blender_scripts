@@ -1,5 +1,5 @@
 ######################################################################################################
-# datestamps the last saved version of a project, and saves it into a zip file                       #
+# Centers the view without changing the zoom. Good for centering large or smol stuff in the view     #
 # License: GPL v3                                                                                    #
 ######################################################################################################
 
