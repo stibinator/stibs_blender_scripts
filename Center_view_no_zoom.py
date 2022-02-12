@@ -26,12 +26,16 @@ class CENTEREVIEWNZ_OT(bpy.types.Operator):
     bl_label = "Center view - no zoom"
    
     def execute(self, context):
+        # store the current cursor location
         curs = context.scene.cursor.location
         oldCurs = mathutils.Vector()
         for i in range(len(curs)):
             oldCurs[i] = curs[i]
+        # center the cursor on the active item
         bpy.ops.view3d.snap_cursor_to_active()
+        # center the view on the cursor
         bpy.ops.view3d.view_center_cursor()
+        # reset the cursor
         context.scene.cursor.location = oldCurs
         return {'FINISHED'}
  
