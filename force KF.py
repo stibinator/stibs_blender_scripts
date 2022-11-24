@@ -19,6 +19,7 @@ def main(context):
     for bon in posBons:
         bon.keyframe_insert("location")
         bon.keyframe_insert("rotation_euler")
+        # bon.keyframe_insert("scale")
 
 
 class ForceKF(bpy.types.Operator):
